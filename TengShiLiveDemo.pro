@@ -73,3 +73,32 @@ win32: LIBS += -L$$PWD/lib/ -lQtAVWidgets1
 
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
+
+DISTFILES += \
+    dependencies/OpenAL32-MinGW.dll \
+    dependencies/OpenAL32-VS2013.dll \
+    dependencies/OpenAL32-VS2015.dll \
+    dependencies/Qt5Core.dll \
+    dependencies/Qt5Gui.dll \
+    dependencies/Qt5Network.dll \
+    dependencies/Qt5OpenGL.dll \
+    dependencies/Qt5Svg.dll \
+    dependencies/Qt5Widgets.dll \
+    dependencies/QtAV1.dll \
+    dependencies/QtAVWidgets1.dll \
+    dependencies/ass.dll \
+    dependencies/avcodec-57.dll \
+    dependencies/avdevice-57.dll \
+    dependencies/avfilter-6.dll \
+    dependencies/avformat-57.dll \
+    dependencies/avresample-3.dll \
+    dependencies/avutil-55.dll \
+    dependencies/libass.dll \
+    dependencies/libcrypto-1_1.dll \
+    dependencies/libeay32.dll \
+    dependencies/libssl-1_1.dll \
+    dependencies/ssleay32.dll \
+    dependencies/swresample-2.dll \
+    dependencies/swscale-4.dll \
+    lib/QtAV1.lib \
+    lib/QtAVWidgets1.lib
