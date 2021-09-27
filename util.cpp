@@ -1,8 +1,7 @@
 ﻿#include "util.h"
-//测试环境
-QString baseApiURL = "http://jledu.f3322.net:9208/live";
+
 //生产环境
-//QString baseApiURL = "https://live.qmzhjy.com/live";
+QString baseApiURL = "https://live.qmzhjy.com/live";
 QString Util::getUrl(QString uri){
     return baseApiURL + uri;
 }
