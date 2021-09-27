@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/btn_close.png</file>
+        <file>images/btn_min.png</file>
+        <file>images/img_logo.png</file>
+        <file>images/img_index.png</file>
+        <file>images/btn_setup.png</file>
+        <file>images/btn_share.png</file>
+        <file>images/img_jump.png</file>
+        <file>images/img_icon.png</file>
+        <file>images/img_play.png</file>
+        <file>images/img_puse.png</file>
+        <file>images/img_nocourse.png</file>
+        <file>images/img_history.png</file>
+        <file>images/app_icon.ico</file>
+    </qresource>
+</RCC>
