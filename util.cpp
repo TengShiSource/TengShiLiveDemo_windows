@@ -1,6 +1,6 @@
 ﻿#include "util.h"
 
-//生产环境111
+//生产环境
 QString baseApiURL = "https://live.qmzhjy.com/live";
 QString Util::getUrl(QString uri){
     return baseApiURL + uri;
