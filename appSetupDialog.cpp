@@ -53,7 +53,10 @@ AppSetupDialog::~AppSetupDialog()
 
 void AppSetupDialog::on_AppSetupDialog_rejected()
 {
-    if(config->appId.isNull()||config->appId.isEmpty()){
+    QString iniFileName = QCoreApplication::applicationDirPath() + "/cache.ini";
+    QSettings configIni(iniFileName, QSettings::IniFormat);
+    QString appId=configIni.value("appId").toString();
+    if(appId.isNull()||appId.isEmpty()){
         QMessageBox::StandardButton result = QMessageBox::information(this, QStringLiteral("系统提示"), QStringLiteral("您还没有正确的配置应用信息，是否退出？"),
                                  QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
         if(result == QMessageBox::Yes){
@@ -95,7 +98,6 @@ void AppSetupDialog::on_btn_ok_clicked()
     QJsonObject replyJson = Util::byteArrayToJsonObject(result);
     int code = replyJson.value("code").toInt();
     QJsonObject data=replyJson.value("data").toObject();
-    qDebug()<<"-----"+QString(QJsonDocument(data).toJson(QJsonDocument::Compact));
     if(code == CODE_SUCCESS){
         //保存应用设置
         config->appId = appId;
